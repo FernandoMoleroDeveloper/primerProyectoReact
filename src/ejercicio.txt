@@ -1,0 +1,23 @@
+// OPERADOR ||
+console.log(false || {}); // Dará {} ya que el primero es falso y con OR siempre mirará el 2º argumento
+console.log("string" || true); // Dará string ya que el segundo es true y con OR al ser true el segundo dará por valido el primero.
+console.log([] || 100); // Dará [] ya que el segundo argumento no se considera false por lo que el primero ya será un argumento válido
+console.log(null || "Prueba"); // Dará prueba pueso que el primer argumento es null y lo considera false.
+console.log("" || true); // Dará true, puesto que el primer argumento "" lo considera un argumento false y pasará al segundo.
+console.log(undefined || false); // Dará false, puesto que undefined y false son considerados ambos false.
+
+// Operador &&
+console.log(false && {}); // Dará false puesto que el primer argumento ya nos dice que es false y no seguirá leyendo.
+console.log("string" && true); // Dará true en este caso cogerá el segundo argumento puesto que con && seguirá leyendo ya que no considera el string como un false hasta dar con un true.
+console.log([] && 100); // Dará 100 no considera que [] sea false por lo que leerá el siguiente y lo dará por true.
+console.log(null && "Prueba"); // Dará null puesto que lo considera un false y dejará de seguir leyendo.
+console.log("" && true); // Dará undefined ya que el primer argumento ya lo considera un false y no seguirá leyendo.
+console.log(undefined && false); // Dará undefined al ser ambos false se quedará con el primer argumento falso.
+
+// Operador ??
+console.log(false ?? {}); // Dará false ya que la primera expresión no es ni null ni undefined y en ?? devolverá la primera en esos casos
+console.log("string" ?? true); // Dará string por la misma razón que la anterior.
+console.log([] ?? 100); / Dará [] misma razón que las dos anteriores.
+console.log(null ?? "Prueba"); // Dará prueba ya que la primera expresión da null y por consiguiente cogerá siempre la segunda
+console.log("" ?? true); // Dará "" puesto que es la primera expresión y no es null ni undefined.
+console.log(undefined ?? false); Dará false ya que la primera expresión da undefined y por consiguiente cogerá la segunda.
